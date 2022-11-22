@@ -1,0 +1,17 @@
+local/
+__pycache__/
+.ipynb_checkpoints/
+package*/
+.DS_Store
+*.zip
+*.so
+*.docx
+*.synctex.gz
+*Notes.bib
+*.log
+*.aux
+*.out
+*.toc
+*.dvi
+*.out.ps
+*.bak
