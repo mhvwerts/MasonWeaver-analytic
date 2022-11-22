@@ -6,7 +6,7 @@ by Lancelot Barthe and Martinus Werts, 2022.
 
 The Mason-Weaver equation (MWE) is a partial differential equation that describes the sedimentation of small particles in a fluid with the particles being subject to Brownian motion.[1] Understanding the evolution of the vertical concentration profile of an initially homogeneous solution of nanoparticles undergoing sedimentation requires solving the MWE. Previously, we used a numerical finite-difference scheme to find concentration profiles obeying the Mason-Weaver equation.[2][3]
 
-We have now developed Python code that evaluates directly the analytic solutions given  in the original publication by Mason and Weaver.[1] The task of numerically evaluating the analytic expressions was not as straight-forward as initially expected (and will be described in a separate accompanying document, in preparation), but we have finally arrived at an efficient and robust program for obtaining sedimentation concentration profiles from the analytic solutions of the Mason-Weaver equation.
+We have now developed Python code that evaluates directly the analytic solutions given  in the original publication by Mason and Weaver.[1] The task of numerically evaluating the analytic expressions was not as straight-forward as initially expected (as will be described in a separate accompanying document, in preparation), but we have finally arrived at an efficient and robust program for obtaining sedimentation concentration profiles from the analytic solutions of the Mason-Weaver equation.
 
 
 [1] Mason, M.; Weaver, W. "The Settling of Small Particles in a Fluid".
