@@ -38,7 +38,7 @@ from scipy.integrate import quad
 import matplotlib.pyplot as plt
 
 import sys
-sys.path.append('..')
+sys.path.append('..') # masonweaver_analytic.py is in parent directory
 import masonweaver_analytic
 from masonweaver_analytic import MW_adim_ISS, MW_adim_IntS
 from masonweaver_analytic import MW_adim_hiPe, MW_adim_hiPe2
