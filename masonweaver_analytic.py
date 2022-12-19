@@ -3,7 +3,8 @@
 '''
 masonweaver_analytic.py :
 
-Numerical evaluation of analytic solutions of the Mason-Weaver equation
+Numerical evaluation of analytic solutions of the Mason-Weaver equation,
+as described in Ref. [2]
 
     Lancelot Barthe, 
     École normale supérieure de Rennes
@@ -25,6 +26,11 @@ References :
 [1] Max Mason, Warren Weaver,
     "The Settling of Small Particles in a Fluid",
     Phys. Rev. 1924, 23, 412
+    
+[2] Barthe, L.; Werts, M. H. V. "Sedimentation of colloidal nanoparticles
+	in fluids: efficient and robust numerical evaluation of analytic solutions
+	of the Mason-Weaver equation". ChemRXiv 2022.
+	[doi:10.26434/chemrxiv-2022-91vrq](https://doi.org/10.26434/chemrxiv-2022-91vrq)
 
 '''
 
