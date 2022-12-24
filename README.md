@@ -46,5 +46,3 @@ The folder `Figures` contains scripts that do calculations using the `masonweave
 
 - Extend this README, in particular by adding more detailed descriptions for the `MW_c_profile` and `MW_adim` functions.
 - Further improve the example script.
-- Finish preparing the accompanying scientific document.
-
