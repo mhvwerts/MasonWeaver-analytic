@@ -45,4 +45,5 @@ The folder `Figures` contains scripts that do calculations using the `masonweave
 ## To do
 
 - Extend this README, in particular by adding more detailed descriptions for the `MW_c_profile` and `MW_adim` functions.
+- Investigate Kahan, Shewchuck algorithms for summing terms as suggested by Bastien Roucariès (see [`accupy`](https://pypi.org/project/accupy/) )
 - Further improve the example script.
