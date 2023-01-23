@@ -55,7 +55,7 @@ from masonweaver_analytic import tau_switch
 noIntS = False 
 
 # DRAFT enables a faster calculation on a less densely sampled grid
-DRAFT = True
+DRAFT = False
 
 
 # set resolution

@@ -160,7 +160,7 @@ def MW_adim_ISS(y, tau, alpha):
         s_m = ((s_a_m*s_b_m*s_c_m)/s_d_m)
         S_m += s_m
     if m >= MAX_ISS_TERMS:
-        raise Exception('Maximum number of ISS terms'\
+        raise OverflowError('Maximum number of ISS terms'\
                         ' exceeded in MW_adim_ISS().')
     c_t = s_factor*S_m # Compute transient solution
     c_ = c_ss + c_t # Compute overall solution
@@ -289,8 +289,8 @@ def MW_adim_hiPe2(y, tau, alpha):
 
     Raises
     ------
-    Exception
-        This function is only valid for 0 <= y <= 0.99. Raises an Exception
+    ValueError
+        This function is only valid for 0 <= y <= 0.99. Raises ValueError
         if this vector contains elements that are out of bounds.
 
     Returns
@@ -301,7 +301,7 @@ def MW_adim_hiPe2(y, tau, alpha):
 
     """
     if not ((min(y)>=0) and (max(y)<=0.99)):
-        raise Exception('y out of domain of validity of MW_adim_hiPe2')
+        raise ValueError('y out of domain of validity of MW_adim_hiPe2')
 
     A = 1 + erf((y-tau)/np.sqrt(4*alpha*tau))
 
@@ -337,15 +337,15 @@ def MW_adim(y, tau, alpha):
     # Check if parameters within domain of validity
 
     if alpha <= 0:
-        raise Exception('alpha should be positive.')
+        raise ValueError('alpha should be positive.')
     if (min(y) < 0.0) or (max(y) > 1.0):
-        raise Exception('y out of range')
+        raise ValueError('y out of range')
     # Choose appropriate analytic solution to be evaluated
     if tau is None:
         c_ = MW_adim_steadystate(y, alpha)
     else:
         if tau < 0:
-            raise Exception('tau should be non-negative.')
+            raise ValueError('tau should be non-negative.')
         elif tau == 0:
             c_ = np.ones_like(y)
         else:
@@ -432,7 +432,7 @@ def MW_c_profile(t, z_max, D, sg, Nz = 200, full_output = False):
         tau = None
     else:
         if t < 0:
-            raise Exception('t should be non-negative.')
+            raise ValueError('t should be non-negative.')
         tau = t/t_sed
     if alpha < ALPHA_SWITCH1:
         y = np.linspace(0, 0.99, Nz) # hiPe2
@@ -511,7 +511,7 @@ def ismonotone(cc, rtol=0.99, atol=1e-7):
     c_ = cc[0]
     for i, c in enumerate(cc[1:]):
         if c < 0:
-            raise Exception('ismonotone only works with positive values')
+            raise ValueError('ismonotone only works with positive values')
         if c > c_:
             c_ = c
         elif (c+atol) < (rtol*c_):
