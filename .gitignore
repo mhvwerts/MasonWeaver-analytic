@@ -15,3 +15,5 @@ package*/
 *.dvi
 *.out.ps
 *.bak
+*.lnk
+
