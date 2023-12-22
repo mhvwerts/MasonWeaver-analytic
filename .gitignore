@@ -1,6 +1,7 @@
 local/
 __pycache__/
 .ipynb_checkpoints/
+.virtual_documents/
 package*/
 .DS_Store
 *.zip
